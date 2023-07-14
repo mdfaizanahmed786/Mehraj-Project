@@ -9,7 +9,7 @@ const port = 5000;
 app.use(express.json());
 app.use(cors());
 
-// Add your routes or other middleware here
+
 app.use("/v1/department", require("./routes/department"));
 app.use("/v1/student", require("./routes/student"));
 app.use("/v1/payment", require("./routes/payment"));
