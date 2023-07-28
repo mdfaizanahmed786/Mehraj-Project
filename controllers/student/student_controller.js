@@ -15,6 +15,7 @@ const addStudent = async (req, res) => {
       school,
       college,
       rollNo,
+      applicationStatus
     } = req.body;
 
     // Validate required fields
@@ -36,6 +37,7 @@ const addStudent = async (req, res) => {
       email,
       school,
       college,
+      applicationStatus,
       rollNo,
     });
 

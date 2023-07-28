@@ -17,7 +17,7 @@ const studentSchema = new mongoose.Schema({
     type: String
   },
   dateOfBirth: {
-    type: Date
+    type: String
   },
   department: {
     type: mongoose.Schema.Types.ObjectId,
@@ -35,9 +35,16 @@ const studentSchema = new mongoose.Schema({
   college: {
     type: String
   },
+applicationStatus:{
+	type:Boolean
+},
   rollNo: {
     type: String
-  }
+  },
+mobileNo:{
+	type:String
+}, 
+
 }, {
   timestamps: true
 });
