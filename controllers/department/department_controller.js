@@ -7,7 +7,7 @@ const addDepartment = async (req, res) => {
     const { name, description, icon, status } = req.body;
 
     // Validate required fields
-    if (!name || !description || !icon || !status) {
+    if (!name || !description || !icon) {
       return res.status(400).json({ error: 'Please enter all fields' });
     }
 
