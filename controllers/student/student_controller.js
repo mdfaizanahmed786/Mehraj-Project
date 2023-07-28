@@ -123,7 +123,7 @@ const getAllStudents = async (req, res) => {
 
 const getStudentById = async (req, res) => {
   try {
-    const { studentId } = req.query;
+    const { studentId } = req.params;
 
     // Validate required field
     if (!studentId) {
