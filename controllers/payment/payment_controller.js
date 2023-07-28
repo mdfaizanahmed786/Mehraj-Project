@@ -4,10 +4,10 @@ const Payment = require("../../models/Payment");
 // Controller function to add a payment
 const makePayment = async (req, res) => {
   try {
-    const { paymentMode, incomeCertificate, casteCertificate, organization, studentId, studentName, dateOfBirth, aadharNumber, caste, minority } = req.body;
+    const { paymentMode, incomeCertificate, organization, studentName, aadharNumber, caste } = req.body;
 
     // Validate required fields
-    if (!paymentMode || !studentId || !studentName || !dateOfBirth || !aadharNumber) {
+    if (!paymentMode || !incomeCertificate || !organization || !caste || !studentName || !aadharNumber) {
       return res.status(400).json({ error: 'Payment mode, student ID, student name, date of birth, and Aadhar number are required fields' });
     }
 
@@ -15,14 +15,14 @@ const makePayment = async (req, res) => {
     const payment = new Payment({
       paymentMode,
       incomeCertificate,
-      casteCertificate,
+
       organization,
-      studentId,
+     
       studentName,
-      dateOfBirth,
+      
       aadharNumber,
       caste,
-      minority
+     
     });
 
     // Save the payment to the database
